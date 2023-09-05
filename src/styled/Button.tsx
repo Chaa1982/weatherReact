@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface FlexPropsInterface {
+interface ButtonPropsInterface {
     width?: string;
     height?: string;
     margin?: string;
@@ -12,8 +12,7 @@ interface FlexPropsInterface {
     color?: string;
 }
 
-export const Flex = styled.div<FlexPropsInterface>`
-    display: flex;
+export const Button = styled.button<ButtonPropsInterface>`
     width: ${(props) => props.width || 'auto'};
     height: ${(props) => props.height || 'auto'};
     margin: ${(props) => props.margin || '0'};
@@ -24,9 +23,3 @@ export const Flex = styled.div<FlexPropsInterface>`
     background-color: ${(props) => props.background || 'none'};
     color: ${(props) => props.color || 'black'};
 `;
-export const FlexRow = styled(Flex)`
-    flex-direction: row;
-`
-export const FlexColumn = styled(Flex)`
-    flex-direction: column;
-`
