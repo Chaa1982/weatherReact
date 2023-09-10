@@ -41,7 +41,15 @@ export const InputComponent = () => {
     <FlexColumn className="device" alignItems="senter">
       <FlexRow>
         <input ref={inputRef} type="text" placeholder="enter city" />
-        <Button onClick={onClickFn} height="23px">
+        <Button
+          className="btn-city"
+          onClick={onClickFn}
+          width="120px"
+          height="23px"
+          borderRadius="10px"
+          background="blue"
+          color="white"
+        >
           get weather data
         </Button>
       </FlexRow>
@@ -51,9 +59,8 @@ export const InputComponent = () => {
         </h1>
         <p>temp: {data?.main.temp && inCelsiusFn(data?.main.temp)}</p>
         <p>
-          temp: min.{" "}
-          {data?.main.temp_min && inCelsiusFn(data?.main.temp_min)} - max.{" "}
-          {data?.main.temp_max && inCelsiusFn(data?.main.temp_max)}
+          temp: min. {data?.main.temp_min && inCelsiusFn(data?.main.temp_min)} -
+          max. {data?.main.temp_max && inCelsiusFn(data?.main.temp_max)}
         </p>
         <p>pressure: {data?.main.pressure}</p>
         <p>humidity: {data?.main.humidity}</p>

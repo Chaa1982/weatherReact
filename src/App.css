@@ -3,3 +3,11 @@ body{
     background-position: center;
     background-size: cover;
 }
+
+.btn-city{
+    translate: 0.3s linear;
+}
+.btn-city:hover{
+    background: yellow;
+    color: blue
+}
