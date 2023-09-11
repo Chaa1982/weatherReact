@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { FlexColumn, FlexRow } from "../styled/Flex";
 import { Button } from "../styled/Button";
 import { WeatherDataInterface } from "../types";
+import { MainContext } from "../contexts/MainContext";
 
 //function convert temperature in celsius format
 function inCelsiusFn(forengeit: number): number {
@@ -21,8 +22,8 @@ function WeatherApiFn(city: string): Promise<WeatherDataInterface> {
 }
 
 export const InputComponent = () => {
+  const{data, setData} = useContext(MainContext);
   const [city, setCity] = useState<string>("London");
-  const [data, setData] = useState<WeatherDataInterface | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
