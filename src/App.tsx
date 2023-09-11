@@ -5,6 +5,7 @@ import { FlexColumn} from './styled/Flex';
 import { MainContextProvider } from "./contexts/MainContext";
 
 
+
 function App() {
   return (
     <MainContextProvider>
@@ -25,7 +26,6 @@ function App() {
           <h1>WEATHER</h1>
           <InputComponent />
         </FlexColumn>
-        
       </FlexColumn>
       </MainContextProvider>
   );
