@@ -1,3 +1,5 @@
+import { Dispatch } from 'react';
+
 export interface WeatherDataInterface{
    coord: CoordInterface;
    weather: WeatherInterface;
@@ -44,5 +46,10 @@ export interface SysInterface{
     country: string,
     sunrise: number;
     sunset: number;
+}
+
+export interface MainContextInterface{
+    data: WeatherDataInterface;
+    setData: Dispatch<WeatherDataInterface>;
 }
 

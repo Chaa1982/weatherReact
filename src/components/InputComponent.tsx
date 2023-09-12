@@ -28,7 +28,7 @@ function convertMsAsDate(ms: number)  {
   
 
 export const InputComponent = () => {
-  const { data, setData } = useContext(MainContext);
+  const { data, setData } = useContext(MainContext)!;
   const [city, setCity] = useState<string>("London");
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [currentDate, setCurrentDate] = useState<Date | null>(null);

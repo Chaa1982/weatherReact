@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import { MainContextInterface} from "../types";
 
 export const useLocalStorage = (key: string) => {
-  const [localStorageData, setLocalStorageData] = useState(JSON.parse(localStorage.getItem(key) || "null"));
+  const [localStorageData, setLocalStorageData] = useState<MainContextInterface>(JSON.parse(localStorage.getItem(key) || "null"));
   
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(localStorageData));
